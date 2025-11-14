@@ -15,9 +15,11 @@ let stardew = {
     locations: {
         town: { x: 2200, y: 800, w: 1600, h: 1200, name: "Pelican Town" },
         town_indoors: { x: 3800, y: 800, w: 1000, h: 1300, name: "Town Indoors" },
+        //town_indoorsnew: { x: 4600, y: 800, w: 1000, h: 1300, name: "Town Indoorsnew" },
         farm: { x: 1100, y: 900, w: 1100, h: 700, name: "Farm" },
         mountain: { x: 2200, y: 150, w: 1500, h: 600, name: "Mountain" },
         mountain_indoors: { x: 3700, y: 100, w: 1200, h: 700, name: "Mountain indoors" },
+        //mountainindoorsnew: { x: 1500, y: 100, w: 700, h: 700, name: "Mountain indoorsnew" },
         beach: { x: 1900, y: 2200, w: 1515, h: 682, name: "Beach" },
         forest: { x: 900, y: 1600, w: 1000, h: 900, name: "Cindersap Forest" },
         forest_indoors: { x: 150, y: 1200, w: 800, h: 1600, name: "Cindersap Forest indoors" },
@@ -71,6 +73,31 @@ let stardew = {
             sewers_bugs_exit: { x: 23, y: 90, name: "Bug Lair" },
             sewers_forest_exit: { x: 116, y: 77, name: "Sewers", text_offset: {x:0,y:-.09} }
         },
+
+        //town_indoorsnew: {
+        //    pharmacy_exit: { x: 258, y: 393, text_offset: { x: -0.12, y: -.07 }, name: "Pharmacy" },
+        //    harvey_entry: { x: 209, y: 336, name: "Pharmacy" },
+        //    harvey_exit: { x: 209, y: 296, name: "Harvey" },
+        //    general_store_exit: { x: 318, y: 404, text_offset: { x: .04, y: +.03 }, name: "General Store"},
+        //    general_store_tea_entry: { x: 348, y: 345, name: "General Store" },
+        //    general_store_tea: { x: 348, y: 284, name: "Tea Garden" },
+        //    saloon_exit: { x: 330, y: 510, name: "Saloon" },
+        //    georges_exit: { x: 420, y: 458, name: "George and Evelyn" },
+        //    trailer_exit: { x: 535, y: 495, name: "Pam's Trailer" },
+        //    mayors_exit: { x: 437, y: 620, name: "Mayor's House" },
+        //    mayors_Stairs: { x: 500, y: 590, name: "Mayor's House?", text_offset: {x:0,y:-.09} },
+        //    mayors_secret: { x: 500, y: 640, name: "Mayor's Maze" },
+        //    sewer_exit: { x: 24, y: 360 , name:"Sewers" },
+        //    willow1_exit: { x: 72, y: 629, text_offset: { x: 0, y: -.09 }, name: "Willow 1" },
+        //    willow2_exit: { x: 148, y: 645, name: "Willow 2" },
+        //    joja_mart_exit: { x: 708, y: 365, name: "Joja/Cinema" },
+        //    community_exit: { x: 388, y: 135, name:"Community Center" },
+        //    smithy_exit: { x: 699, y: 593, name: "Clint" },
+        //    museum_exit: { x: 746, y: 648, name: "Museum"},
+        //    sewers_bugs_entrance: { x: 23, y: 140, name: "Sewer Bug Lair" },
+        //    sewers_bugs_exit: { x: 23, y: 90, name: "Bug Lair" },
+        //    sewers_forest_exit: { x: 116, y: 77, name: "Sewers", text_offset: {x:0,y:-.09} }
+        //},
         
         farm: {
             farmhouse_entrance: { x: 417, y: 429 },
@@ -107,19 +134,45 @@ let stardew = {
             swamphut_exit: { x: 1753, y: 184, name: "Swamphut"},
             swamphut_to_wizard: { x: 1753, y: 112, name: "Swamphut"},
             sebas_stairs: {x: 252, y: 1033, name: "Carpenter", text_offset: { x: .11, y: -.13 }},
-            sebas_stairs_room: {x: 321, y: 1142, name: "Sebastian", text_offset: { x: .11, y: -.13 }},
+            sebas_room: {x: 321, y: 1142, name: "Sebastian", text_offset: { x: .11, y: -.13 }},
             spa: {x: 394, y: 473,name:"Spa",  text_offset: { x: .11, y: .13 }},
             spa_change_exit: {x: 318, y: 412, name: "Changing Room", text_offset: { x: -.04, y: 0 }},
             spa_change_entrance: {x: 182, y: 493,name:"Spa Hall"},
             spa_change_to_spa: {x: 506, y: 423,name:"Changing Room", text_offset: { x: .04, y: 0 }}
         },
 
+        //mountainindoorsnew: { //New entrances added for Beta branch
+        //    maru_exit: { x: 106, y: 1014, name: "Maru" },
+        //    carpenter_exit: { x: 170, y: 1081, name: "Carpenter" },
+        //    treehouse_exit: { x: 237, y: 793, name: "Leo's House" },
+        //    linus_exit: { x: 453, y: 797, name: "Linus' tent", text_offset: { x: .08, y: 0 } },
+        //    mines_exit: { x: 854, y: 759, name: "The Mines" },
+        //    adventurers_exit: { x: 1199, y: 817, name: "Adventurers Guild" },
+        //    quarry_mine_exit: { x: 1637, y: 957, name: "Quarry Mines" },
+        //    spa_exit: { x: 275, y: 420, name: "Spa Hall", text_offset: { x: -.07, y: 0 } },
+        //    swamp_exit: { x: 1756, y: 588, name: "Swamp" },
+        //    swamphut_entry: { x:1753, y:250, name: "Swamp"},
+        //    swamphut_exit: { x: 1753, y: 184, name: "Swamphut"},
+        //    swamphut_to_wizard: { x: 1753, y: 112, name: "Swamphut"},
+        //    sebas_stairs: {x: 252, y: 1033, name: "Carpenter", text_offset: { x: .11, y: -.13 }},
+        //    sebas_room: {x: 321, y: 1142, name: "Sebastian", text_offset: { x: .11, y: -.13 }},
+
+        //    spa_female: {x: 498, y: 510,name:"Spa", text_offset: { x: 0, y: +.17 }},
+        //    spa_male: {x: 1080, y: 510,name:"Spa"},
+        //    change_male_exit: {x: 860, y: 510, name: "Male Change Room", text_offset: { x: 0, y: .17 }},
+        //    spa_male_entrance: {x: 350, y: 300,name:"Spa Hall", text_offset: { x: 0, y: -.17 }},
+        //    change_male_to_spa: {x: 1080, y: 423,name:"Male Change Room"},
+        //    change_female_exit: {x: 720, y: 510, name: "Female Change Room"},
+        //    spa_female_entrance: {x: 200, y: 300,name:"Spa Hall"},
+        //    change_female_to_spa: {x: 498, y: 423,name:"Female Change Room"}
+        //},
+
         beach: {
-            elliot_entrance: { x: 1172, y: 224, name: "Elliot Entry" },
-            fishshop_entrance: { x: 713, y: 766, name: "Fisshop Entry" },
+            elliot_entrance: { x: 1172, y: 224, name: "Beachhut" },
+            fishshop_entrance: { x: 713, y: 766 },
             elliot_exit: { x: 1172, y: 152, name: "Elliot" },
-            fishshop_exit: { x: 713, y: 702 },
-            fishshop_boat: { x: 783, y: 662, name: "to Boat", text_offset:{x:0,y:-0.03} },
+            fishshop_exit: { x: 713, y: 702, name: "Fishshop" },
+            fishshop_boat: { x: 783, y: 662, name: "Fishshop backdoor", text_offset:{x:0,y:-0.03} },
         },
         
 
