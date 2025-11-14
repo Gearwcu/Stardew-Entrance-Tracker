@@ -1,0 +1,102 @@
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Stardew Entrance Tracker</title>
+    <link rel="stylesheet" href="main.css" />
+
+    <!--<script src="data/games/emerald.js"></script>-->
+    <script src="data/games/stardew.js"></script>
+
+    <script src="data/tooltips.js"></script>
+    <script src="data/tracker_info.js"></script>
+
+    <script src="code/main.js"></script>
+    <script src="code/render.js"></script>
+    <script src="code/input.js"></script>
+    <script src="code/config.js"></script>
+    <script src="code/network.js"></script>
+    <script src="code/automarker.js"></script>
+    <script src="code/tests.js"></script>
+
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-MAP_SCALE=1">
+    <link rel="icon" href="images/icon.png">
+    <!-- Social media metadata -->
+    <meta property="og:title" content="Stardew Entrance Tracker" />
+    <meta property="og:description" content="Tool to track entrances in the Stardew Entrance Randomizer" />
+</head>
+
+  <body>
+    <article>
+      <canvas id="canvas">Your browser does not support canvas element.</canvas>
+
+      <div id="config_window" class="window window_hidden">
+        <div class="config_content">
+          <span class="close" onclick="HideConfig()">&times;</span>
+          <div class="settings-row">
+            <button onclick="LoadFile()">Load</button>
+            <button onclick="SaveFile()">Save</button>
+            <button onclick="ResetButton()">Reset Tracker</button>
+            <label><input type="checkbox" id="checkbox_smooth"      onclick="ChangeSmooth(checked)"      >Smooth Images</label>
+            <label><input type="checkbox" id="checkbox_tooltips"    onclick="ChangeTooltips(checked)"    >Disable Tooltips</label>
+            <label><input type="checkbox" id="checkbox_fittoscreen" onclick="ChangeFitToScreen(checked)" >Fit to Window</label>
+          </div>
+          <div class="settings-row">
+            <label>Line color:</label>
+            <input type="color" id="line_color" onchange="ChangeLineColor(value)">
+            <button onclick="ResetColor()">Default color</button>
+          </div>
+          <p id="game_buttons"></p> <!-- They get created in code -->
+          <p id="loading_game_text">Loading game...</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="help_window" class="window window_hidden">
+        <div class="config_content">
+          <span class="close" onclick="HideHelp()">&times;</span>
+          <div id="help_v1">
+              <h1>Controls</h1>
+              Warp linking:
+              <ul>
+                  <li><b>Left click</b> on an entrance to start linking. Then, click another entrance to create a link. <b>Right click</b> to cancel this state.</li>
+                  <li><b>Right click</b> on any known warp to undo and mark it as unknown (if it's a link, it will mark the other end as unknown too).</li>
+              </ul>
+              <br>
+              Location changing:
+              <ul>
+                  <li><b>Left click</b> on the map to change current location.</li>
+                  <li><b>Left click twice</b> on a linked warp to change to the linked location.</li>
+              </ul>
+              Other:
+              <ul>
+                  <li><b>Left click</b> on an empty space in an overcrowded location's map to check its layout.</li>
+                  <li><b>Left click</b> the remaining warps number to highlight all warps & locations left to check.</li>
+              </ul>
+              <h1>Credits</h1>
+              Original tracker created by <a href="https://twitter.com/srcSantana">Sergi "Sekii" Santana</a>.
+              <br />
+              TUNIC Tracker created by Scipio Wright.
+              <br />
+	      Stardew Tracker reskin created by Gearwcu.
+              <br />
+              Hover Text figured out by MrPokemon11.
+          </div>
+          <hr>
+          <p>
+            <a class="social-media" href="https://twitter.com/srcSantana">          <img class="social-media-image" src="images/_social-media/twitter-32x32.png"></a>
+            <a class="social-media" href="https://gitlab.com/Sekii/pokemon-tracker"><img class="social-media-image" src="images/_social-media/gitlab-32x32.png"></a>
+          </p>
+        </div>
+      </div>
+
+    </article>
+  </body>
+
+  <script type="text/javascript">init();</script>
+
+</html>
