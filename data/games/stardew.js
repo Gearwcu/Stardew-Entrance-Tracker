@@ -86,11 +86,11 @@ let stardew = {
         },
         
         farm: {
-            farmhouse_entrance: { x: 417, y: 429 },
+            farmhouse_entry: { x: 417, y: 429 },
             farmhouse_exit: { x: 417, y: 391, name: "Farmhouse" },
-            farmcave_entrance: { x: 101, y: 345 },
+            farmcave_entry: { x: 101, y: 345 },
             farmcave_exit: { x: 101, y: 308, name: "Farmcave" },
-            tunnel_entrance: { x: 244, y: 247, name: "Bus Tunnel Entry" },
+            tunnel_entry: { x: 244, y: 247, name: "Bus Tunnel Entry" },
             tunnel_exit: { x: 244, y: 194, name: "Bus Tunnel" }
             //8.xER
             //cellar_entry: { x: 244, y: 194, name: "Cellar Entry"}
@@ -174,8 +174,8 @@ let stardew = {
         },
 
         beach: {
-            elliot_entrance: { x: 1172, y: 224, name: "Beachhut" },
-            fishshop_entrance: { x: 713, y: 766 },
+            elliot_entry: { x: 1172, y: 224, name: "Beachhut" },
+            fishshop_entry: { x: 713, y: 766 },
             elliot_exit: { x: 1172, y: 152, name: "Elliot" },
             fishshop_exit: { x: 713, y: 702, name: "Fishshop" },
             fishshop_boat: { x: 783, y: 662, name: "Fishshop Backdoor", text_offset:{x:0,y:-0.05} },
@@ -204,7 +204,7 @@ let stardew = {
 
         forest_indoors: {
             wizard_exit: { x: 51, y: 265, name: "Wizard" },
-            wizard_basement_entrance: { x: 230, y: 265, name: "Wizard Basement Entry", text_offset: { x: 0.06, y: 0 } },
+            wizard_basement_entry: { x: 230, y: 265, name: "Wizard Basement Entry", text_offset: { x: 0.06, y: 0 } },
             wizard_basement_exit: { x: 230, y: 380, name: "Wizard Basement" },
             wizard_swamp: { x: 170, y: 490, name: "Basement to Swamp" },
             marnie_exit: { x: 956, y: 149, name: "Marnie"},
@@ -219,11 +219,11 @@ let stardew = {
         },	
 
         island_west: {
-            farmhouse_island_entrance: { x: 750, y: 401,name:"Island Farm" },
-            island_cave_entrance: { x: 946, y: 347,name:"Island Farm" },
-            ship_entrance: { x: 621, y: 907 },
-            crystal_entrance: { x: 591, y: 108 },
-            walnut_room_entrance: { x: 194, y: 226,name: "Walnut Door" },
+            farmhouse_island_entry: { x: 750, y: 401,name:"Island Farm" },
+            island_cave_entry: { x: 946, y: 347,name:"Island Farm" },
+            ship_entry: { x: 621, y: 907 },
+            crystal_entry: { x: 591, y: 108 },
+            walnut_room_entry: { x: 194, y: 226,name: "Walnut Door" },
             farmhouse_island_exit: { x: 750, y: 341,name: "Island Farmhouse" },
             island_cave_exit: { x: 946, y: 261,name:"Island Farmcave" },
             ship_exit: { x: 619, y: 842,name:"Shipwreck" },
