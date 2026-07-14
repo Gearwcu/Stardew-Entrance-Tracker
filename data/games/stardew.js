@@ -14,12 +14,10 @@ let stardew = {
 	// Tracker information
     locations: {
         town: { x: 2200, y: 800, w: 1600, h: 1200, name: "Pelican Town" },
-        town_indoorsnew: { x: 3800, y: 800, w: 1000, h: 1300, name: "Town Indoors" },
-        //town_indoorsnew: { x: 4600, y: 800, w: 1000, h: 1300, name: "Town Indoorsnew" },
+        town_indoors: { x: 3800, y: 800, w: 1000, h: 1300, name: "Town Indoors" },
         farm: { x: 1100, y: 900, w: 1100, h: 700, name: "Farm" },
         mountain: { x: 2200, y: 150, w: 1500, h: 600, name: "Mountain" },
-        mountainindoorsnew: { x: 3700, y: 100, w: 1200, h: 700, name: "Mountain indoors" },
-        //mountainindoorsnew: { x: 1500, y: 100, w: 700, h: 700, name: "Mountain indoorsnew" },
+        mountain_indoors: { x: 3700, y: 100, w: 1200, h: 700, name: "Mountain indoors" },
         beach: { x: 1900, y: 2200, w: 1515, h: 682, name: "Beach" },
         forest: { x: 900, y: 1600, w: 1000, h: 900, name: "Cindersap Forest" },
         forest_indoors: { x: 150, y: 1200, w: 800, h: 1600, name: "Cindersap Forest indoors" },
@@ -39,7 +37,7 @@ let stardew = {
             pharmacy_entry: { x: 258, y: 393, name:"Pharmacy Entry", text_offset: { x: -0.12, y: -.07 } },
             general_store_entry: { x: 318, y: 404, text_offset: { x: .04, y: +.03 } },
             saloon_entry: { x: 330, y: 510, name:"Saloon Entry" },
-            georges_entry: { x: 420, y: 458 },
+            josh_entry: { x: 420, y: 458 },
             pam_entry: { x: 535, y: 495 },
             mayors_entry: { x: 437, y: 620 },
             sewer_entry: { x: 256, y: 707, name:"Town Sewer Entry" },
@@ -68,11 +66,11 @@ let stardew = {
             harvey_exit: { x: 209, y: 296, name: "Harvey" },
             general_store_exit: { x: 318, y: 404, text_offset: { x: .04, y: +.03 }, name: "General Store"},
             general_store_tea_entry: { x: 348, y: 345, name: "General Store" },
-            general_store_tea: { x: 348, y: 284, name: "Tea Garden" },
+            general_store_tea: { x: 348, y: 284, name: "Sunroom" },
             saloon_exit: { x: 330, y: 510, name: "Saloon" },
             josh_exit: { x: 420, y: 458, name: "George and Evelyn" },
-            trailer_exit: { x: 535, y: 495, name: "Pam's Trailer" },
-            mayors_exit: { x: 437, y: 620, name: "Mayor's Manor" },
+            trailer_exit: { x: 535, y: 495, name: "Pam's Home" },
+            mayors_exit: { x: 437, y: 615, name: "Mayor's Manor", text_offset: {x:-0.03,y: -0.02} },
             lewis_basement_entry: { x: 500, y: 590, name: "Mayor's Manor?", text_offset: {x:0,y:-.11} },
             lewis_basement: { x: 500, y: 640, name: "Mayor's Maze", text_offset: {x:0,y:.06} },
             sewer_exit: { x: 24, y: 360 , name:"Sewers" },
@@ -155,27 +153,6 @@ let stardew = {
             treehouse_exit: { x: 237, y: 793, name: "Leo's House" },
             linus_exit: { x: 453, y: 797, name: "Linus' tent", text_offset: { x: .08, y: 0 } },
             mines_exit: { x: 854, y: 759, name: "The Mines" },
-            adventurers_exit: { x: 1199, y: 817, name: "Adventurers Guild" },
-            quarry_mine_exit: { x: 1637, y: 957, name: "Quarry Mines" },
-            spa_exit: { x: 196, y: 569, name: "Spa Hall" },
-            swamp_exit: { x: 1756, y: 588, name: "Swamp" },
-            swamphut_entry: { x:1753, y:250, name: "Swamp"},
-            swamphut_exit: { x: 1753, y: 184, name: "Swamphut"},
-            swamphut_to_wizard: { x: 1753, y: 112, name: "Swamphut"},
-            sebas_stairs: {x: 252, y: 1033, name: "Carpenter", text_offset: { x: .11, y: -.13 }},
-            sebas_room: {x: 321, y: 1142, name: "Sebastian", text_offset: { x: .11, y: -.13 }},
-            spa: {x: 394, y: 473,name:"Spa",  text_offset: { x: .11, y: .13 }},
-            spa_change_exit: {x: 318, y: 412, name: "Changing Room", text_offset: { x: -.04, y: 0 }},
-            spa_change_entrance: {x: 182, y: 493,name:"Spa Hall"},
-            spa_change_to_spa: {x: 506, y: 423,name:"Changing Room", text_offset: { x: .04, y: 0 }}
-        },
-
-        mountainindoorsnew: { //New entrances added for Beta branch
-            maru_exit: { x: 106, y: 1014, name: "Maru" },
-            carpenter_exit: { x: 170, y: 1081, name: "Carpenter" },
-            treehouse_exit: { x: 237, y: 793, name: "Leo's House" },
-            linus_exit: { x: 453, y: 797, name: "Linus' tent", text_offset: { x: .08, y: 0 } },
-            mines_exit: { x: 854, y: 759, name: "The Mines" },
             advent_guild_exit: { x: 1199, y: 817, name: "Guild" },
             quarry_mine_exit: { x: 1637, y: 957, name: "Quarry Mines" },
             spa_exit: { x: 275, y: 420, name: "Spa Hall", text_offset: { x: -.07, y: 0 } },
@@ -183,17 +160,17 @@ let stardew = {
             swamphut_entry: { x:1753, y:250, name: "Swamp"},
             swamphut_exit: { x: 1753, y: 184, name: "Swamphut"},
             swamphut_to_wizard: { x: 1753, y: 112, name: "Swamphut"},
-            sebas_stairs: {x: 252, y: 1033, name: "Carpenter", text_offset: { x: .11, y: -.13 }},
-            sebas_room: {x: 321, y: 1142, name: "Sebastian", text_offset: { x: .11, y: -.13 }},
+            sebastian_stairs: {x: 252, y: 1033, name: "Carpenter", text_offset: { x: .11, y: -.13 }},
+            sebastian_room: {x: 321, y: 1142, name: "Sebastian", text_offset: { x: .11, y: -.13 }},
 
             spa_female: {x: 498, y: 510,name:"Spa Pool", text_offset: { x: 0, y: +.17 }},
             spa_male: {x: 1080, y: 510,name:"Spa Pool"},
-            change_gent_exit: {x: 860, y: 510, name: "Mens Locker Room", text_offset: { x: 0, y: .17 }},
+            change_gent_exit: {x: 860, y: 510, name: "Mens Lockers", text_offset: { x: 0, y: .17 }},
             spa_male_entry: {x: 350, y: 300,name:"Spa Hall", text_offset: { x: 0, y: -.17 }},
-            change_gent_to_spa: {x: 1080, y: 423,name:"Mens Locker Room"},
-            change_female_exit: {x: 720, y: 510, name: "Womens Locker Room"},
-            spa_female_entry: {x: 200, y: 300,name:"Spa Hall"},
-            change_female_to_spa: {x: 498, y: 423,name:"Womens Locker Room"}
+            change_gent_to_spa: {x: 1080, y: 423,name:"Mens Lockers"},
+            change_female_exit: {x: 720, y: 510, name: "Womens Lockers"},
+            spa_female_entry: {x: 200, y: 300,name:"Spa Hall", text_offset: { x: 0, y: 0.03 }},
+            change_female_to_spa: {x: 498, y: 423,name:"Womens Lockers"}
         },
 
         beach: {
@@ -201,7 +178,7 @@ let stardew = {
             fishshop_entrance: { x: 713, y: 766 },
             elliot_exit: { x: 1172, y: 152, name: "Elliot" },
             fishshop_exit: { x: 713, y: 702, name: "Fishshop" },
-            fishshop_boat: { x: 783, y: 662, name: "Fishshop Backdoor", text_offset:{x:0,y:-0.03} },
+            fishshop_boat: { x: 783, y: 662, name: "Fishshop Backdoor", text_offset:{x:0,y:-0.05} },
             //8.xER
             //beach_town
             //beach_short_forest
@@ -227,9 +204,9 @@ let stardew = {
 
         forest_indoors: {
             wizard_exit: { x: 51, y: 265, name: "Wizard" },
-            wizard_basement_entrance: { x: 330, y: 446, name: "Wizard Basement Entry" },
-            wizard_basement_exit: { x: 397, y: 508, name: "Wizard Basement" },
-            wizard_swamp: { x: 295, y: 548, name: "Basement to Swamp", text_offset:{x:0,y:0.03} },
+            wizard_basement_entrance: { x: 230, y: 265, name: "Wizard Basement Entry", text_offset: { x: 0.06, y: 0 } },
+            wizard_basement_exit: { x: 230, y: 380, name: "Wizard Basement" },
+            wizard_swamp: { x: 170, y: 490, name: "Basement to Swamp" },
             marnie_exit: { x: 956, y: 149, name: "Marnie"},
             leah_exit: { x: 1114, y: 326, name: "Leah" },
             mastery_exit: { x: 1082, y: 754, name: "Masteries" },
@@ -245,12 +222,12 @@ let stardew = {
             farmhouse_island_entrance: { x: 750, y: 401,name:"Island Farm" },
             island_cave_entrance: { x: 946, y: 347,name:"Island Farm" },
             ship_entrance: { x: 621, y: 907 },
-            puzzle_entrance: { x: 591, y: 108 },
+            crystal_entrance: { x: 591, y: 108 },
             walnut_room_entrance: { x: 194, y: 226,name: "Walnut Door" },
             farmhouse_island_exit: { x: 750, y: 341,name: "Island Farmhouse" },
             island_cave_exit: { x: 946, y: 261,name:"Island Farmcave" },
             ship_exit: { x: 619, y: 842,name:"Shipwreck" },
-            puzzle_exit: { x: 591, y: 23,name:"Simon Says"},
+            crystal_exit: { x: 591, y: 23,name:"Simon Says"},
             walnut_room_exit: { x: 194, y: 151,name:"Qi's room"}
             //8.xER
             //isle_west_south
@@ -266,7 +243,7 @@ let stardew = {
             fieldoffice_entry: { x: 426, y: 422 },
             volcano_entry: { x: 374, y: 195 },
             fieldoffice_exit: { x: 424, y: 354, name: "Snail Field Office" },
-            island_north_cave1_exit: { x: 201, y: 354, name: "Island North Cave" },
+            snail_cave_exit: { x: 201, y: 354, name: "Island North Cave" },
             volcano_exit: { x: 377, y: 110, name: "Volcano" },
             volcano_exit_river: { x: 114, y: 196, name: "Volcano River" },
             volcano_secret_beach: { x: 107, y: 273, name: "Volcano Beach" },
@@ -326,7 +303,7 @@ let stardew = {
     // if null, then we don't do tracking
     // if undefined, then we don't draw the mark
     marks: [
-        [["unknown", 0], ["corridor", 0], ["dead_end", null]]
+        [["unknown", 0], ["corridor", 0], ["dead_end", null], ["ginger", 0]]
     ],
     progress: [
 
