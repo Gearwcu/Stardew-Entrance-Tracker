@@ -86,11 +86,11 @@ let stardew = {
         },
         
         farm: {
-            farmhouse_entrance: { x: 417, y: 429 },
+            farmhouse_entry: { x: 417, y: 429 },
             farmhouse_exit: { x: 417, y: 391, name: "Farmhouse" },
-            farmcave_entrance: { x: 101, y: 345 },
+            farmcave_entry: { x: 101, y: 345 },
             farmcave_exit: { x: 101, y: 308, name: "Farmcave" },
-            tunnel_entrance: { x: 244, y: 247, name: "Bus Tunnel Entry" },
+            tunnel_entry: { x: 244, y: 247, name: "Bus Tunnel Entry" },
             tunnel_exit: { x: 244, y: 194, name: "Bus Tunnel" }
             //8.xER
             //cellar_entry: { x: 244, y: 194, name: "Cellar Entry"}
@@ -110,10 +110,15 @@ let stardew = {
             //minecart_bus_to_q: { x: 244, y: 194, name: "Bus"}
             //minecart_bus_to_town: { x: 244, y: 194, name: "Bus"}
             //minecart_bus_to_mine: { x: 244, y: 194, name: "Bus"}
+            //farm_totem_exit: { x: 244, y: 194}
+            //farm_obelisk_exit: { x: 244, y: 194}
+            //return_scepter_exit: { x: 244, y: 194}
+
+            //move to new map
             //earth_obelisk: { x: 244, y: 194}
             //water_obelisk: { x: 244, y: 194}
             //desert_obelisk: { x: 244, y: 194}
-            //farm_obelisk: { x: 244, y: 194}
+            //island_obelisk: { x: 244, y: 194}
             //return_scepter
             //farm_totem
             //mountain_totem
@@ -145,6 +150,8 @@ let stardew = {
             //minecart_mine_to_bus
             //minecart_mine_to_town
             //rail_mountain
+            //mountain_totem_exit
+            //earth_obelisk_exit
         },
 
         mountain_indoors: {
@@ -160,11 +167,13 @@ let stardew = {
             swamphut_entry: { x:1753, y:250, name: "Swamp"},
             swamphut_exit: { x: 1753, y: 184, name: "Swamphut"},
             swamphut_to_wizard: { x: 1753, y: 112, name: "Swamphut"},
+            swampwarp_warp: { x: 1250, y: 220, name: "Swampwarp"},
+            swampwarp_rail: { x: 1250, y: 290, name: "Swampwarp"},
             sebastian_stairs: {x: 252, y: 1033, name: "Carpenter", text_offset: { x: .11, y: -.13 }},
             sebastian_room: {x: 321, y: 1142, name: "Sebastian", text_offset: { x: .11, y: -.13 }},
 
-            spa_female: {x: 498, y: 510,name:"Spa Pool", text_offset: { x: 0, y: +.17 }},
-            spa_male: {x: 1080, y: 510,name:"Spa Pool"},
+            spa_female: {x: 498, y: 510,name:"Public Bath", text_offset: { x: 0, y: +.17 }},
+            spa_male: {x: 1080, y: 510,name:"Public Bath"},
             change_gent_exit: {x: 860, y: 510, name: "Mens Lockers", text_offset: { x: 0, y: .17 }},
             spa_male_entry: {x: 350, y: 300,name:"Spa Hall", text_offset: { x: 0, y: -.17 }},
             change_gent_to_spa: {x: 1080, y: 423,name:"Mens Lockers"},
@@ -174,16 +183,18 @@ let stardew = {
         },
 
         beach: {
-            elliot_entrance: { x: 1172, y: 224, name: "Beachhut" },
-            fishshop_entrance: { x: 713, y: 766 },
+            elliot_entry: { x: 1172, y: 224, name: "Beachhut" },
+            fishshop_entry: { x: 713, y: 766 },
             elliot_exit: { x: 1172, y: 152, name: "Elliot" },
             fishshop_exit: { x: 713, y: 702, name: "Fishshop" },
-            fishshop_boat: { x: 783, y: 662, name: "Fishshop Backdoor", text_offset:{x:0,y:-0.05} },
+            fishshop_back: { x: 783, y: 662, name: "Fishshop Backdoor", text_offset:{x:0,y:-0.05} },
             //8.xER
             //beach_town
             //beach_short_forest
-            //tide_town
+            //beach_short_tide
             //boat_ticket
+            //water_obelisk_exit
+            //beach_totem_exit
         },
         
 
@@ -204,26 +215,20 @@ let stardew = {
 
         forest_indoors: {
             wizard_exit: { x: 51, y: 265, name: "Wizard" },
-            wizard_basement_entrance: { x: 230, y: 265, name: "Wizard Basement Entry", text_offset: { x: 0.06, y: 0 } },
+            wizard_basement_entry: { x: 230, y: 265, name: "Wizard Basement Entry", text_offset: { x: 0.06, y: 0 } },
             wizard_basement_exit: { x: 230, y: 380, name: "Wizard Basement" },
             wizard_swamp: { x: 170, y: 490, name: "Basement to Swamp" },
             marnie_exit: { x: 956, y: 149, name: "Marnie"},
             leah_exit: { x: 1114, y: 326, name: "Leah" },
             mastery_exit: { x: 1082, y: 754, name: "Masteries" },
-            //8.xER
-            //
-            //
-            //
-            //
-            //
         },	
 
         island_west: {
-            farmhouse_island_entrance: { x: 750, y: 401,name:"Island Farm" },
-            island_cave_entrance: { x: 946, y: 347,name:"Island Farm" },
-            ship_entrance: { x: 621, y: 907 },
-            crystal_entrance: { x: 591, y: 108 },
-            walnut_room_entrance: { x: 194, y: 226,name: "Walnut Door" },
+            farmhouse_island_entry: { x: 750, y: 401,name:"Island Farm" },
+            island_cave_entry: { x: 946, y: 347,name:"Island Farm" },
+            ship_entry: { x: 621, y: 907 },
+            crystal_entry: { x: 591, y: 108 },
+            walnut_room_entry: { x: 194, y: 226,name: "Walnut Door" },
             farmhouse_island_exit: { x: 750, y: 341,name: "Island Farmhouse" },
             island_cave_exit: { x: 946, y: 261,name:"Island Farmcave" },
             ship_exit: { x: 619, y: 842,name:"Shipwreck" },
@@ -236,6 +241,8 @@ let stardew = {
             //parrot_farm_dig
             //parrot_farm_jungle
             //parrot_farm_dock
+
+            //farm_obelisk
         },	
     
         island_north: {
@@ -259,10 +266,11 @@ let stardew = {
             //parrot_volcano_jungle
             //parrot_volcano_dock
             //volcano_f5_hole
+            //volcano_f5_hole_exit
         },									
        
         island_south: {
-            boat: { x: 154, y: 888, name:"Boat Repair" },
+            boat_tunnel: { x: 154, y: 888, name:"Boat Repair" },
             pirate_cove_entry: { x: 690, y: 663, name:"South Island Alcove" },
             pirate_cove_exit: { x: 686, y: 598, name: "Pirate Cove" },
             islandhut_entry: { x: 567, y: 94 },
@@ -274,7 +282,7 @@ let stardew = {
             //isle_south_north
             //isle_south_north_nut
             //isle_south_east
-            //isle_south_sE??
+            //isle_south_se
             //parrot_dock_volcano
             //parrot_dock_farm
             //parrot_dock_dig
@@ -284,18 +292,21 @@ let stardew = {
             //parrot_dock_farm
             //parrot_dock_dig
             //parrot_dock_dock
-            //isle_sE_south?
+            //isle_sE_south
+            //island_obelisk_exit
+            //island_totem_exit
         },
         
         desert: {
-            desert_shop_entrance: { x: 129, y: 1193 },
-            skull_cavern_entrance: { x: 188, y: 159 },
+            oasis_entry: { x: 129, y: 1193 },
+            skull_cavern_entry: { x: 188, y: 159 },
             desert_shop_exit: { x: 129, y: 1109, name: "Desert Exit" },
-            casino_entrance: { x: 253, y: 1050, name: "Casino Entrance" },
+            casino_entry: { x: 253, y: 1050, name: "Casino Entrance" },
             casino_exit: { x: 251, y: 972, name: "Casino Exit" },
             skull_cavern_exit: { x: 188, y: 60, name: "Skull Cavern" },
             //8.xER
             //desert_bus
+            //desert_obelisk_exit
         },
     },
 
