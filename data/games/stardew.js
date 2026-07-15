@@ -172,14 +172,14 @@ let stardew = {
             sebastian_stairs: {x: 252, y: 1033, name: "Carpenter", text_offset: { x: .11, y: -.13 }},
             sebastian_room: {x: 321, y: 1142, name: "Sebastian", text_offset: { x: .11, y: -.13 }},
 
-            spa_female: {x: 498, y: 510,name:"Public Bath", text_offset: { x: 0, y: +.17 }},
-            spa_male: {x: 1080, y: 510,name:"Public Bath"},
-            change_gent_exit: {x: 860, y: 510, name: "Mens Lockers", text_offset: { x: 0, y: .17 }},
-            spa_male_entry: {x: 350, y: 300,name:"Spa Hall", text_offset: { x: 0, y: -.17 }},
-            change_gent_to_spa: {x: 1080, y: 423,name:"Mens Lockers"},
-            change_female_exit: {x: 720, y: 510, name: "Womens Lockers"},
-            spa_female_entry: {x: 200, y: 300,name:"Spa Hall", text_offset: { x: 0, y: 0.03 }},
-            change_female_to_spa: {x: 498, y: 423,name:"Womens Lockers"}
+            bath_women: {x: 498, y: 510,name:"Public Bath", text_offset: { x: 0, y: +.17 }},
+            bath_men: {x: 1080, y: 510,name:"Public Bath"},
+            change_men_exit: {x: 860, y: 510, name: "Mens Lockers", text_offset: { x: 0, y: .17 }},
+            bathhouse_men_entry: {x: 350, y: 300,name:"Bath Hall", text_offset: { x: 0, y: -.17 }},
+            change_men_to_spa: {x: 1080, y: 423,name:"Mens Lockers"},
+            change_women_exit: {x: 720, y: 510, name: "Womens Lockers"},
+            bathhouse_women_entry: {x: 200, y: 300,name:"Bath Hall", text_offset: { x: 0, y: 0.03 }},
+            change_women_to_spa: {x: 498, y: 423,name:"Womens Lockers"}
         },
 
         beach: {
@@ -187,7 +187,7 @@ let stardew = {
             fishshop_entry: { x: 713, y: 766 },
             elliot_exit: { x: 1172, y: 152, name: "Elliot" },
             fishshop_exit: { x: 713, y: 702, name: "Fishshop" },
-            fishshop_back: { x: 783, y: 662, name: "Fishshop Backdoor", text_offset:{x:0,y:-0.05} },
+            fishshop_to_boat: { x: 783, y: 662, name: "Fishshop Backdoor", text_offset:{x:0,y:-0.05} },
             //8.xER
             //beach_town
             //beach_short_forest
@@ -225,13 +225,13 @@ let stardew = {
 
         island_west: {
             farmhouse_island_entry: { x: 750, y: 401,name:"Island Farm" },
-            island_cave_entry: { x: 946, y: 347,name:"Island Farm" },
-            ship_entry: { x: 621, y: 907 },
+            gourmand_entry: { x: 946, y: 347,name:"Island Farm" },
+            shipwwreck_entry: { x: 621, y: 907 },
             crystal_entry: { x: 591, y: 108 },
             walnut_room_entry: { x: 194, y: 226,name: "Walnut Door" },
             farmhouse_island_exit: { x: 750, y: 341,name: "Island Farmhouse" },
-            island_cave_exit: { x: 946, y: 261,name:"Island Farmcave" },
-            ship_exit: { x: 619, y: 842,name:"Shipwreck" },
+            gourmand_exit: { x: 946, y: 261,name:"Gourmand Frog" },
+            shipwreck_exit: { x: 619, y: 842,name:"Shipwreck" },
             crystal_exit: { x: 591, y: 23,name:"Simon Says"},
             walnut_room_exit: { x: 194, y: 151,name:"Qi's room"}
             //8.xER
@@ -275,8 +275,8 @@ let stardew = {
             pirate_cove_exit: { x: 686, y: 598, name: "Pirate Cove" },
             islandhut_entry: { x: 567, y: 94 },
             islandhut_exit: { x: 567, y: 37, name: "Island Treehouse" },
-            gembird_entry: { x: 677, y: 285 },
-            gembird_exit: { x: 677, y: 214, name: "Gembirds" },
+            shrine_entry: { x: 677, y: 285 },
+            shrine_exit: { x: 677, y: 214, name: "Gembirds" },
             //8.xER (change island south name)
             //isle_south_west
             //isle_south_north
@@ -298,11 +298,11 @@ let stardew = {
         },
         
         desert: {
-            oasis_entry: { x: 129, y: 1193 },
-            skull_cavern_entry: { x: 188, y: 159 },
-            desert_shop_exit: { x: 129, y: 1109, name: "Desert Exit" },
-            casino_entry: { x: 253, y: 1050, name: "Casino Entrance" },
-            casino_exit: { x: 251, y: 972, name: "Casino Exit" },
+            oasis_entrance: { x: 129, y: 1193 },
+            skull_cavern_entrance: { x: 188, y: 159 },
+            oasis_exit: { x: 129, y: 1109, name: "Oasis" },
+            casino_entrance: { x: 253, y: 1050, name: "Casino Entry" },
+            casino_exit: { x: 251, y: 972, name: "Casino" },
             skull_cavern_exit: { x: 188, y: 60, name: "Skull Cavern" },
             //8.xER
             //desert_bus
