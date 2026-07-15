@@ -298,10 +298,10 @@ let stardew = {
         },
         
         desert: {
-            oasis_entrance: { x: 129, y: 1193 },
-            skull_cavern_entrance: { x: 188, y: 159 },
+            oasis_entry: { x: 129, y: 1193 },
+            skull_cavern_entry: { x: 188, y: 159 },
             oasis_exit: { x: 129, y: 1109, name: "Oasis" },
-            casino_entrance: { x: 253, y: 1050, name: "Casino Entry" },
+            casino_entry: { x: 253, y: 1050, name: "Casino Entry" },
             casino_exit: { x: 251, y: 972, name: "Casino" },
             skull_cavern_exit: { x: 188, y: 60, name: "Skull Cavern" },
             //8.xER
