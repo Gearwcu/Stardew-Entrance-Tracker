@@ -46,18 +46,7 @@ let stardew = {
             joja_mart_entry: { x: 708, y: 365 },
             community_entry: { x: 388, y: 135, name:"Community Center Entry" },
             smithy_entry: { x: 699, y: 593 },
-            museum_entry: { x: 746, y: 648 },
-            //8.xER
-            //town_bus
-            //town_forest
-            //town_mountain
-            //town_beach
-            //town_tide
-            //town_mount_short_west
-            //town_mount_short_east
-            //minecart_town_to_q
-            //minecart_town_to_bus
-            //minecart_town_to_mine
+            museum_entry: { x: 746, y: 648 }
         },
 
         town_indoors: {
@@ -92,39 +81,6 @@ let stardew = {
             farmcave_exit: { x: 101, y: 308, name: "Farmcave" },
             tunnel_entry: { x: 244, y: 247, name: "Bus Tunnel Entry" },
             tunnel_exit: { x: 244, y: 194, name: "Bus Tunnel" }
-            //8.xER
-            //cellar_entry: { x: 244, y: 194, name: "Cellar Entry"}
-            //cellar_exit: { x: 244, y: 194, name: "Cellar"}
-            //farm_backwoods: { x: 244, y: 194}
-            //farm_bus: { x: 244, y: 194}
-            //farm_forest: { x: 244, y: 194}
-            //farm_greenhouse_entry: { x: 244, y: 194, name: "Greenhouse Entry"}
-            //farm_greenhouse_exit: { x: 244, y: 194, name: "Greenhouse"}
-            //backwood_farm: { x: 244, y: 194, name: "Backwood Top"}
-            //backwood_mountain: { x: 244, y: 194, name: "Backwood Top"}
-            //backwood_bus: { x: 244, y: 194, name: "Backwood Road"}
-            //bus_farm: { x: 244, y: 194, name: "Bus Stop"}
-            //bus_town: { x: 244, y: 194, name: "Bus Stop"}
-            //bus_desert: { x: 244, y: 194, name: "Bus Stop"}
-            //bus_road: { x: 244, y: 194, name: "Bus Stop"}
-            //minecart_bus_to_q: { x: 244, y: 194, name: "Bus"}
-            //minecart_bus_to_town: { x: 244, y: 194, name: "Bus"}
-            //minecart_bus_to_mine: { x: 244, y: 194, name: "Bus"}
-            //farm_totem_exit: { x: 244, y: 194}
-            //farm_obelisk_exit: { x: 244, y: 194}
-            //return_scepter_exit: { x: 244, y: 194}
-
-            //move to new map
-            //earth_obelisk: { x: 244, y: 194}
-            //water_obelisk: { x: 244, y: 194}
-            //desert_obelisk: { x: 244, y: 194}
-            //island_obelisk: { x: 244, y: 194}
-            //return_scepter
-            //farm_totem
-            //mountain_totem
-            //beach_totem
-            //desert_totem
-            //island_totem
         },
         
         mountain: {
@@ -136,22 +92,7 @@ let stardew = {
             guild_entry: { x: 1199, y: 817, name: "Guild Entry" },
             quarry_mine_entry: { x: 1637, y: 957, name: "Quarry" },
             spa_entry: { x: 196, y: 569, name: "Railroad" },
-            swamp_entry: { x: 1094, y: 119, name: "Swamp Entry" }
-            //8.xER (new tab for minecarts? or swamp?)
-            //mountain_backwood
-            //mountain_rail
-            //mountain_town
-            //mountain_shortcut_west
-            //mountain_shortcut_east
-            //minecart_q_to_bus
-            //minecart_q_to_town
-            //minecart_q_to_mine
-            //minecart_mine_to_q
-            //minecart_mine_to_bus
-            //minecart_mine_to_town
-            //rail_mountain
-            //mountain_totem_exit
-            //earth_obelisk_exit
+            swamp_entry: { x: 1094, y: 119, name: "Railroad" }
         },
 
         mountain_indoors: {
@@ -175,10 +116,10 @@ let stardew = {
             bath_women: {x: 498, y: 510,name:"Public Bath", text_offset: { x: 0, y: +.17 }},
             bath_men: {x: 1080, y: 510,name:"Public Bath"},
             change_men_exit: {x: 860, y: 510, name: "Mens Lockers", text_offset: { x: 0, y: .17 }},
-            bathhouse_men_entry: {x: 350, y: 300,name:"Bath Hall", text_offset: { x: 0, y: -.17 }},
+            bathhouse_men_entry: {x: 350, y: 300,name:"Bath Hall"},
             change_men_to_spa: {x: 1080, y: 423,name:"Mens Lockers"},
             change_women_exit: {x: 720, y: 510, name: "Womens Lockers"},
-            bathhouse_women_entry: {x: 200, y: 300,name:"Bath Hall", text_offset: { x: 0, y: 0.03 }},
+            bathhouse_women_entry: {x: 200, y: 300,name:"Bath Hall", text_offset: { x: -.12}},
             change_women_to_spa: {x: 498, y: 423,name:"Womens Lockers"}
         },
 
@@ -188,13 +129,7 @@ let stardew = {
             elliot_exit: { x: 1172, y: 152, name: "Elliot" },
             fishshop_exit: { x: 713, y: 702, name: "Fishshop" },
             fishshop_to_boat: { x: 783, y: 662, name: "Fishshop Backdoor", text_offset:{x:0,y:-0.05} },
-            //8.xER
-            //beach_town
-            //beach_short_forest
-            //beach_short_tide
-            //boat_ticket
-            //water_obelisk_exit
-            //beach_totem_exit
+            Boat_tunnel: { x: 968, y: 785, name: "Boat", location: "island_south" },
         },
         
 
@@ -204,13 +139,7 @@ let stardew = {
             marnie_entry: { x: 956, y: 149 },
             leah_entry: { x: 1114, y: 326, name: "Leah Entry" },
             sewer_entry: { x: 1006, y: 1046, name: "Forest Sewer Entry" },
-            mastery_entry: { x: 1082, y: 754, name: "Mastery Entry" },
-            //8.xER
-            //forest_farm
-            //forest_town
-            //forest_short_beach
-            //forest_secret
-            //secret_forest
+            mastery_entry: { x: 1082, y: 754, name: "Mastery Entry" }
         },
 
         forest_indoors: {
@@ -220,7 +149,7 @@ let stardew = {
             wizard_swamp: { x: 170, y: 490, name: "Basement to Swamp" },
             marnie_exit: { x: 956, y: 149, name: "Marnie"},
             leah_exit: { x: 1114, y: 326, name: "Leah" },
-            mastery_exit: { x: 1082, y: 754, name: "Masteries" },
+            mastery_exit: { x: 1082, y: 754, name: "Masteries" }
         },	
 
         island_west: {
@@ -234,67 +163,26 @@ let stardew = {
             shipwreck_exit: { x: 619, y: 842,name:"Shipwreck" },
             crystal_exit: { x: 591, y: 23,name:"Simon Says"},
             walnut_room_exit: { x: 194, y: 151,name:"Qi's room"}
-            //8.xER
-            //isle_west_south
-            //parrot_farm_volcano
-
-            //parrot_farm_dig
-            //parrot_farm_jungle
-            //parrot_farm_dock
-
-            //farm_obelisk
         },	
     
         island_north: {
-            snail_cave_entry: { x: 201, y: 430, name: "Dig Site" },
+            snail_cave_entry: { x: 201, y: 430, name: "Dig Site", text_offset: { x: 0.04, y: 0 } },
             fieldoffice_entry: { x: 426, y: 422 },
             volcano_entry: { x: 374, y: 195 },
             fieldoffice_exit: { x: 424, y: 354, name: "Snail Field Office" },
-            snail_cave_exit: { x: 201, y: 354, name: "Island North Cave" },
+            snail_cave_exit: { x: 201, y: 354, name: "Island North Cave", text_offset: { x: 0.04, y: 0 } },
             volcano_exit: { x: 377, y: 110, name: "Volcano" },
             volcano_exit_river: { x: 114, y: 196, name: "Volcano River" },
-            volcano_secret_beach: { x: 107, y: 273, name: "Volcano Beach" },
-            //8.xER
-            //isle_north_south
-            //isle_north_south_nut
-            //parrot_dig_volcano
-            //parrot_dig_farm
-            //parrot_dig_jungle
-            //parrot_dig_dock
-            //parrot_volcano_farm
-            //parrot_volcano_dig
-            //parrot_volcano_jungle
-            //parrot_volcano_dock
-            //volcano_f5_hole
-            //volcano_f5_hole_exit
+            volcano_secret_beach: { x: 107, y: 273, name: "Volcano Beach" }
         },									
        
         island_south: {
-            boat_tunnel: { x: 154, y: 888, name:"Boat Repair" },
-            pirate_cove_entry: { x: 690, y: 663, name:"South Island Alcove" },
-            pirate_cove_exit: { x: 686, y: 598, name: "Pirate Cove" },
-            islandhut_entry: { x: 567, y: 94 },
-            islandhut_exit: { x: 567, y: 37, name: "Island Treehouse" },
-            shrine_entry: { x: 677, y: 285 },
-            shrine_exit: { x: 677, y: 214, name: "Gembirds" },
-            //8.xER (change island south name)
-            //isle_south_west
-            //isle_south_north
-            //isle_south_north_nut
-            //isle_south_east
-            //isle_south_se
-            //parrot_dock_volcano
-            //parrot_dock_farm
-            //parrot_dock_dig
-            //parrot_dock_jungle
-            //isle_east_south
-            //parrot_dock_volcano
-            //parrot_dock_farm
-            //parrot_dock_dig
-            //parrot_dock_dock
-            //isle_sE_south
-            //island_obelisk_exit
-            //island_totem_exit
+            pirate_cove_entry: { x: 690, y: 582, name:"South Island Alcove" },
+            pirate_cove_exit: { x: 690, y: 540, name: "Pirate Cove" },
+            islandhut_entry: { x: 545, y: 68 },
+            islandhut_exit: { x: 545, y: 24, name: "Island Treehouse" },
+            shrine_entry: { x: 677, y: 256 },
+            shrine_exit: { x: 677, y: 214, name: "Gembirds" }
         },
         
         desert: {
@@ -303,10 +191,7 @@ let stardew = {
             oasis_exit: { x: 129, y: 1109, name: "Oasis" },
             casino_entry: { x: 253, y: 1050, name: "Casino Entry" },
             casino_exit: { x: 251, y: 972, name: "Casino" },
-            skull_cavern_exit: { x: 188, y: 60, name: "Skull Cavern" },
-            //8.xER
-            //desert_bus
-            //desert_obelisk_exit
+            skull_cavern_exit: { x: 188, y: 60, name: "Skull Cavern" }
         },
     },
 
