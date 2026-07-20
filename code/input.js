@@ -341,6 +341,23 @@ function OnMouseUp(event) {
                                 case STATE_LINK1: {
                                     // If user clicked same warp we will change location
                                     if (current_location == link_location && info.target == link_warp) {
+                                        // for decoupled, highlight the warp that leads to the clicked location if ctrl or shift is held
+                                        if (event.ctrlKey || event.shiftKey) {
+                                            for (let location in game.warps) {
+                                                for (let name in game.warps[location]) {
+                                                    let w = game.warps[location][name];
+                                                    if (w && w.link && w.link == link_warp && w.link_type && w.link_type == LINKTYPE_WARP) {
+                                                        current_state = STATE_DEFAULT;
+                                                        current_location = location;
+                                                        RerenderLayer(LAYER_LOCATION);
+                                                        highlight = { location: current_location, warps: [name] };
+                                                        RerenderLayer(LAYER_HIGHLIGHT);
+                                                        break;
+                                                    }
+                                                }
+                                            }
+                                            break;
+                                        } else {
                                         current_state = STATE_DEFAULT;
                                         let w = game.warps[current_location][info.target];
                                         if (w.link_type && w.link_type == LINKTYPE_WARP) {
@@ -350,6 +367,7 @@ function OnMouseUp(event) {
                                             RerenderLayer(LAYER_HIGHLIGHT);
                                         }
                                         break;
+                                        }
                                     }
                                 } // falldown
                                 case STATE_LINK2: {
@@ -369,7 +387,9 @@ function OnMouseUp(event) {
                                         }
     
                                         ChangeWarp(game, link_location,    link_warp,   LINKTYPE_WARP, current_location, info.target, modifier);
-                                        ChangeWarp(game, current_location, info.target, LINKTYPE_WARP, link_location,    link_warp,   modifier);
+                                        if (!html.config.decoupled_mode.checked) {
+                                            ChangeWarp(game, current_location, info.target, LINKTYPE_WARP, link_location,    link_warp,   modifier);
+                                        }
                                     }
 
                                     current_state = STATE_DEFAULT;
@@ -508,7 +528,6 @@ function OnMouseUp(event) {
 // Change the warp and send info to server if connected
 function ChangeWarp(current_game, location, warp, link_type, link_location, link, modifier) {
     ChangeWarpOffline(current_game, location, warp, link_type, link_location, link, modifier);
-
     if (connected_to || connections.length > 0) {
         let text = current_game.name + "," + location + "," + warp + "," + link_type + "," + link_location + "," + link + "," + modifier;
         if (connected_to) {

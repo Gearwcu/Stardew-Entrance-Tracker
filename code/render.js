@@ -299,14 +299,6 @@ function InitRendering() {
 
 function Render() {
     // Render all layers that are issued with a rerender
-    var delay = ( function() {
-        var timer = 0;
-        return function(callback, ms) {
-            clearTimeout (timer);
-            timer = setTimeout(callback, ms);
-        };
-    })();
-    delay(function(){
         for (let layer of layers) {
             if (!layer.rerender) continue;
             layer.rerender = false;
@@ -324,7 +316,6 @@ function Render() {
             if (DEBUG.ENABLED && layer.skip) { continue; }
             html.context.drawImage(layer.canvas, 0, 0, html.canvas.width, html.canvas.height);
         }
-    }, 1250 );
 }
 
 //  ██████         ███    ███  █████  ██████  

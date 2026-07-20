@@ -1,12 +1,12 @@
 let DEBUG = {
-    ENABLED: false,
-    WARP_TO_SELF:     false,
-    PRINT_KEY:        false,
-    IMAGE_DIMENSIONS: true,
-    NETWORK: true
+    ENABLED:            false,
+    WARP_TO_SELF:       false,
+    PRINT_KEY:          false,
+    IMAGE_DIMENSIONS:   true,
+    NETWORK:            false,
 }
 
-const AUTOTRACKER_DEVELOPMENT = true;
+const AUTOTRACKER_DEVELOPMENT = false; // ported over from the old tunic tracker, unused
 
 const LINKTYPE_WARP = "warp";
 const LINKTYPE_MARK = "mark";
@@ -19,6 +19,7 @@ const CACHE = {
     LAST_VERSION:      "last-version",
     LINE_COLOR:        "line-color",
     TOOLTIPS_DISABLED: "tooltips-disabled-v2",
+    DECOUPLED_MODE:    "decoupled_mode"
 }
 const CURRENT_VERSION = 5;
 
@@ -75,7 +76,16 @@ function init() {
     }
     for (let key_game in games) {
         games[key_game].ready = false;
-        games[key_game].obtained = new Set();
+        games[key_game].obtained = new Set();      
+        let count = 0;
+        for (let location in game.warps) {
+            for (let name in game.warps[location]) {
+                if (game.warps[location][name]["link"] == "unknown") {
+                    count++;
+                }
+            }
+        }
+        game.marks[0][0][1] = count;
     }
     LoadImages();
     RegisterInputEvents();
@@ -103,6 +113,7 @@ const HTML_ID = {
         smooth_checkbox: "checkbox_smooth",
         tooltipsdisabled: "checkbox_tooltips",
         fit_to_screen: "checkbox_fittoscreen",
+        decoupled_mode: "checkbox_decoupled",
         loading_text: "loading_game_text",
         game_buttons: "game_buttons",
         line_color: "line_color",
@@ -121,6 +132,7 @@ const HTML_ID = {
     help: {
         window: "help_window",
         changelog: "changelog_header",
+        update_header: "update_header",
         versions: "help_v" // this is an array of size == CURRENT_VERSION
     },
     canvas: "canvas", // + context
@@ -142,13 +154,15 @@ function RetrieveAllHTMLElements() {
     config.window           = document.getElementById(HTML_ID.config.window);
     config.loading_text     = document.getElementById(HTML_ID.config.loading_text);
     config.smooth_checkbox  = document.getElementById(HTML_ID.config.smooth_checkbox);
-    config.fit_to_screen    = document.getElementById(HTML_ID.config.fit_to_screen);
+    config.fit_to_screen    = document.getElementById(HTML_ID.config.fit_to_screen);    
+    config.decoupled_mode   = document.getElementById(HTML_ID.config.decoupled_mode);
     config.tooltipsdisabled = document.getElementById(HTML_ID.config.tooltipsdisabled);
     config.line_color       = document.getElementById(HTML_ID.config.line_color);
     config.loading_text.innerHTML = "";
     config.smooth_checkbox.checked  = (localStorage.getItem(CACHE.SMOOTH_IMAGES)     == "false") ? false : true;
     config.fit_to_screen.checked    = (localStorage.getItem(CACHE.FIT_TO_SCREEN)     == "false") ? false : true;
     config.tooltipsdisabled.checked = (localStorage.getItem(CACHE.TOOLTIPS_DISABLED) == "true") ? true : false;
+    config.decoupled_mode.checked = (localStorage.getItem(CACHE.DECOUPLED_MODE)      == "true") ? true : false;
     config.line_color.value = line_color;
     
     // Retrieve networking elements

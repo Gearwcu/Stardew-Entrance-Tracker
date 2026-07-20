@@ -1,6 +1,7 @@
 // Games will be shown in the settings in order
 let ordered_games = [
-    stardew
+    stardew,
+    stardew8
 ];
 
 // Used to name save files

@@ -223,7 +223,9 @@ function ChangeFitToScreen(checked) {
     localStorage.setItem(CACHE.FIT_TO_SCREEN, checked);
     SetCanvasDimensions();
 }
-
+function ChangeDecoupled(checked) {
+    localStorage.setItem(CACHE.DECOUPLED_MODE, checked);
+}
 
 function ResetColor() { ChangeLineColor(DEFAULT_COLOR); }
 function ChangeLineColor(color) {

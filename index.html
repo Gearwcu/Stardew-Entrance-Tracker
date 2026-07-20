@@ -9,6 +9,7 @@
 
     <!--<script src="data/games/emerald.js"></script>-->
     <script src="data/games/stardew.js"></script>
+    <script src="data/games/stardew8.js"></script>
 
     <script src="data/tooltips.js"></script>
     <script src="data/tracker_info.js"></script>
@@ -44,7 +45,8 @@
             <label><input type="checkbox" id="checkbox_smooth"      onclick="ChangeSmooth(checked)"      >Smooth Images</label>
             <label><input type="checkbox" id="checkbox_tooltips"    onclick="ChangeTooltips(checked)"    >Disable Tooltips</label>
             <label><input type="checkbox" id="checkbox_fittoscreen" onclick="ChangeFitToScreen(checked)" >Fit to Window</label>
-          </div>
+          </div>          
+          <label><input type="checkbox" id="checkbox_decoupled"      onclick="ChangeDecoupled(checked)"      >Decoupled Mode</label>
           <div class="settings-row">
             <label>Line color:</label>
             <input type="color" id="line_color" onchange="ChangeLineColor(value)">
@@ -71,6 +73,9 @@
               <ul>
                   <li><b>Left click</b> on the map to change current location.</li>
                   <li><b>Left click twice</b> on a linked warp to change to the linked location.</li>
+                  <ul>
+                      <li><b>Decoupled entrances: hold ctrl or shift</b> while left clicking to instead highlight the location that <i>leads to</i> the clicked location.</li>
+                  </ul>
               </ul>
               Other:
               <ul>
