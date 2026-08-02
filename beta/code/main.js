@@ -3,7 +3,7 @@ let DEBUG = {
     WARP_TO_SELF:       false,
     PRINT_KEY:          false,
     IMAGE_DIMENSIONS:   true,
-    NETWORK:            false,
+    NETWORK:            true
 }
 
 const AUTOTRACKER_DEVELOPMENT = false; // ported over from the old tunic tracker, unused
@@ -166,7 +166,19 @@ function RetrieveAllHTMLElements() {
     config.line_color.value = line_color;
     
     // Retrieve networking elements
-    
+    let network = html.config.network;
+    network.input_name    = document.getElementById(HTML_ID.config.network.input_name);
+    network.input_connect = document.getElementById(HTML_ID.config.network.input_connect);
+    network.id            = document.getElementById(HTML_ID.config.network.id);
+    network.input_name.value    = "";
+    network.input_connect.value = "";
+    network.id.value            = "---";
+    network.connectto   = document.getElementById(HTML_ID.config.network.connectto);
+    network.connections = document.getElementById(HTML_ID.config.network.connections);
+    network.name        = document.getElementById(HTML_ID.config.network.name);
+    network.warning     = document.getElementById(HTML_ID.config.network.warning);
+    network.div         = document.getElementById(HTML_ID.config.network.div);
+    network.toggle      = document.getElementById(HTML_ID.config.network.toggle);
 
     // Retrieve help window elements
     let help    = html.help;
