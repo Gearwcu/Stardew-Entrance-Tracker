@@ -165,12 +165,12 @@ let stardew8 = {
 
             bath_women: {x: 498, y: 510,name:"Public Bath", text_offset: { x: 0, y: +.17 }},
             bath_men: {x: 1080, y: 510,name:"Public Bath"},
-            change_men_exit: {x: 860, y: 510, name: "Mens Lockers", text_offset: { x: 0, y: .17 }},
+            locker_men_exit: {x: 860, y: 510, name: "Mens Lockers", text_offset: { x: 0, y: .17 }},
             bathhouse_men_entry: {x: 350, y: 300,name:"Bath Hall"},
-            change_men_to_spa: {x: 1080, y: 423,name:"Mens Lockers"},
-            change_women_exit: {x: 720, y: 510, name: "Womens Lockers"},
+            locker_men_to_spa: {x: 1080, y: 423,name:"Mens Lockers"},
+            locker_women_exit: {x: 720, y: 510, name: "Womens Lockers"},
             bathhouse_women_entry: {x: 200, y: 300,name:"Bath Hall", text_offset: { x: -.12}},
-            change_women_to_spa: {x: 498, y: 423,name:"Womens Lockers"}
+            locker_women_to_spa: {x: 498, y: 423,name:"Womens Lockers"}
         },
 
         beach: {
@@ -320,7 +320,7 @@ let stardew8 = {
     // if null, then we don't do tracking
     // if undefined, then we don't draw the mark
     marks: [
-        [["unknown", 0], ["corridor", 0], ["dead_end", null], ["ginger", 0]]
+        [["unknown", 0], ["corridor", 0], ["dead_end", null], ["Blank", 0], ["ginger", 0], ["Junimo", 0], ["Rusty_Key", 0], ["Minecart", 0], ["Parrot", 0]]
     ],
     progress: [
 
