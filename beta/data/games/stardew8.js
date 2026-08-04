@@ -303,15 +303,15 @@ let stardew8 = {
         },
 
         onewaywarps: {
-            earth_obelisk: {x: 112, y: 90, name: "Earth Obelisk" },
-            water_obelisk: {x: 160, y: 90, name: "Water Obelisk" },
-            desert_obelisk: {x: 209, y: 90, name: "Desert Obelisk" },
+            earth_obelisk: {x: 160, y: 90, name: "Earth Obelisk" },
+            water_obelisk: {x: 209, y: 90, name: "Water Obelisk" },
+            desert_obelisk: {x: 112, y: 90, name: "Desert Obelisk" },
             island_obelisk: {x: 256, y: 90, name: "Island Obelisk" },
             return_scepter: {x: 37, y: 90, name: "Return Scepter" },
             farm_totem: {x: 38, y: 184, name: "Farm Totem" },
-            mountain_totem: {x: 113, y: 184, name: "Mountain Totem" },
-            beach_totem: {x: 162, y: 184, name: "Beach Totem" },
-            desert_totem: {x: 211, y: 184, name: "Desert Totem" },
+            mountain_totem: {x: 162, y: 184, name: "Mountain Totem" },
+            beach_totem: {x: 211, y: 184, name: "Beach Totem" },
+            desert_totem: {x: 113, y: 184, name: "Desert Totem" },
             island_totem: {x: 262, y: 184, name: "Island Totem" }
         }
     },
